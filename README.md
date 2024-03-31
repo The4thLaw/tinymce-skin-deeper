@@ -55,5 +55,5 @@ Then evaluate any color expression as needed.
 
 To get an idea of the progress:
 ```shell
-grep -RE '(darken|fade|contrast|lighten)\(' src/less/theme/ | wc -l
+grep -RE '(darken|fade|contrast|lighten|mix)\(' src/less/theme/ | wc -l
 ```
