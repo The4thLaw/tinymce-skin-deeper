@@ -6,27 +6,37 @@
 @background-color: red;
 //@color-tint: var(--dpr-color-tint);
 @color-tint: blue;
-//@border-color: var(--dpr-border-color);
-@border-color: yellow;
+@border-color: var(--dpr-border-color);
 
 // From globals/globals.less
 @tinymce-separator-color: var(--dpr-separator-color);
 
+// From components/accessibility-checker/accessibility-checker.less
+@accessibility-issue-info-heading-text-color: var(--dpr-accessibility-issue-info-heading-text-color);
+@accessibility-issue-info-background-color: var(--dpr-accessibility-issue-info-background-color);
+
+// From components/button/button.less
+@button-active-background-color: var(--dpr-button-active-background-color);
+@button-enabled-background-color: var(--dpr-button-enabled-background-color);
+@button-hover-background-color: var(--dpr-button-hover-background-color);
+@button-disabled-text-color: var(--button-disabled-text-color);
+
 // From components/collection/collection.less
 @collection-group-label-background-color: var(--dpr-collection-group-label-background-color);
 
-// Buttons
-//@toolbar-button-text-color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
-//@toolbar-button-background-color: transparent;
-//@toolbar-button-hover-background-color: rgba(var(--v-theme-on-background), calc(var(--v-hover-opacity) * var(--v-theme-overlay-multiplier)));
+// From components/dialog/dialog.less
+@dialog-table-border-color: var(--dpr-dialog-table-border-color);
 
 // Vuetify bindings
-// TODO: extract the Vuetify bindings to their own CSS
+// TODO: extract the Vuetify and oxide bindings to their own CSS
 
 /*
 :root {
   --dpr-background-color: rgba(var(--v-theme-on-background), var(--v-idle-opacity));
   --dpr-color-tint: rbg(var(--v-theme-secondary));
+  //@toolbar-button-text-color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
+  //@toolbar-button-background-color: transparent;
+  //@toolbar-button-hover-background-color: rgba(var(--v-theme-on-background), calc(var(--v-hover-opacity) * var(--v-theme-overlay-multiplier)));
 }
 */
 
@@ -40,6 +50,19 @@
   // From globals/globals.less
   --dpr-separator-color: #e3e3e3;
 
+  // From components/accessibility-checker/accessibility-checker.less
+  --dpr-accessibility-issue-info-heading-text-color: #006ce7;
+  --dpr-accessibility-issue-info-background-color: rgba(0, 101, 216, 0.1);
+
+  // From components/button/button.less
+  --dpr-button-active-background-color: #0054b4;
+  --dpr-button-enabled-background-color: #0054b4;
+  --dpr-button-hover-background-color: #0060ce;
+  --dpr-button-disabled-text-color: rgba(255, 255, 255, 0.5);
+
   // From components/collection/collection.less
   --dpr-collection-group-label-background-color: #fdfdfd;
+
+  // From components/dialog/dialog.less
+  --dpr-dialog-table-border-color: #626262;
 }
