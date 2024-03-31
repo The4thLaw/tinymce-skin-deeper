@@ -127,10 +127,9 @@ gulp.task('clean', function () {
 //
 // Build project and watch LESS file changes
 //
-// TODO: remove linting from the watch
-gulp.task('css', gulp.series('lint', 'less', 'generateJs', 'minifyCss'));
-gulp.task('build', gulp.series('clean', 'css'));
+gulp.task('css', gulp.series('less', 'generateJs', 'minifyCss'));
+gulp.task('build', gulp.series('clean', 'lint', 'css'));
 gulp.task('default', gulp.series('build'));
 
 gulp.task('demo-build', gulp.series('css', 'less', 'minifyCss', 'buildDemos', 'buildSkinSwitcher'));
-gulp.task('watch', gulp.series('build', 'buildDemos', 'buildSkinSwitcher', 'monitor'));
+gulp.task('watch', gulp.series('clean', 'css', 'buildDemos', 'buildSkinSwitcher', 'monitor'));
