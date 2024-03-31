@@ -1,0 +1,45 @@
+@import 'src/less/theme/theme';
+
+// Root variables
+// From globals/global-variables
+//@background-color: var(--dpr-background-color);
+@background-color: red;
+//@color-tint: var(--dpr-color-tint);
+@color-tint: blue;
+//@border-color: var(--dpr-border-color);
+@border-color: yellow;
+
+// From globals/globals.less
+@tinymce-separator-color: var(--dpr-separator-color);
+
+// From components/collection/collection.less
+@collection-group-label-background-color: var(--dpr-collection-group-label-background-color);
+
+// Buttons
+//@toolbar-button-text-color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
+//@toolbar-button-background-color: transparent;
+//@toolbar-button-hover-background-color: rgba(var(--v-theme-on-background), calc(var(--v-hover-opacity) * var(--v-theme-overlay-multiplier)));
+
+// Vuetify bindings
+// TODO: extract the Vuetify bindings to their own CSS
+
+/*
+:root {
+  --dpr-background-color: rgba(var(--v-theme-on-background), var(--v-idle-opacity));
+  --dpr-color-tint: rbg(var(--v-theme-secondary));
+}
+*/
+
+// Oxide bindings
+:root {
+  // From globals/global-variables
+  --dpr-background-color: #fff;
+  --dpr-color-tint: #006ce7;
+  --dpr-border-color: #eee;
+
+  // From globals/globals.less
+  --dpr-separator-color: #e3e3e3;
+
+  // From components/collection/collection.less
+  --dpr-collection-group-label-background-color: #fdfdfd;
+}

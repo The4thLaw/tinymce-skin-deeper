@@ -1,0 +1,55 @@
+{
+  "name": "tinymce-skin-deeper",
+  "version": "1.0.0",
+  "description": "TinyMCE 7 Deeper skin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/The4thLaw/tinymce-skin-deeper.git"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp watch",
+    "ci": "gulp build --no-color"
+  },
+  "keywords": [
+    "TinyMCE",
+    "Vuetify",
+    "Vue",
+    "skin",
+    "theme"
+  ],
+  "author": "Xavier Dalem",
+  "license": "GPL-2.0-or-later",
+  "files": [
+    "build/skins/content/**/*.css",
+    "build/skins/content/**/*.css.map",
+    "build/skins/ui/**/*.css",
+    "build/skins/ui/**/*.css.map",
+    "build/skins/ui/**/*.woff",
+    "src/less/**/*",
+    "src/svg/**/*",
+    "src/fonts/**/*",
+    "src/text/**/*",
+    "README.md",
+    "LICENSE.txt"
+  ],
+  "dependencies": {
+    "prism-themes": "^1.9.0",
+    "prismjs": "^1.27.0"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-less": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-stylelint": "^13.0.0",
+    "less-plugin-autoprefix": "^2.0.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "through2": "^4.0.2"
+  }
+}
