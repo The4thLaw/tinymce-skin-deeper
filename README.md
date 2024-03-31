@@ -22,6 +22,8 @@ This skin was tested on:
 
 This skin uses the [TinyMCE "creating a skin"](https://www.tiny.cloud/docs/tinymce/7/creating-a-skin/) guide from the documentation as basis.
 
+While building the skin, all expressions that cannot be evaluated by less (such as a `darken` on a now CSS variable) are replaced by random CSS colors. This will allow pinpointing the source of potential issues in binding the variables.
+
 ### Running the demo
 
 ```shell
@@ -35,3 +37,18 @@ npm run start
 npm install
 npm run build
 ```
+
+### Working on the style
+
+Random CSS colors can be retrieved from https://www.color-hex.com/random.php or https://www.random.org/colors/hex .
+
+Go to https://lesscss.org/less-preview/ and paste the following:
+```css
+@border-color: #eee;
+
+.eval {
+	color: /* TODO */;
+}
+````
+
+Then evaluate any color expression as needed
