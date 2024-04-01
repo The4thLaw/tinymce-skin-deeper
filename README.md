@@ -42,9 +42,12 @@ npm run build
 
 Random CSS colors can be retrieved from https://www.color-hex.com/random.php or https://www.random.org/colors/hex .
 
-Go to https://lesscss.org/less-preview/ and paste the following:
+To evaluate original Oxide expressions, go to https://lesscss.org/less-preview/ and paste the following:
 ```css
 @border-color: #eee;
+@button-background-color: @color-tint;
+@button-enabled-background-color: darken(@button-background-color, 10%);
+@color-tint: #006ce7;
 
 .eval {
 	color: /* TODO */;
@@ -55,5 +58,5 @@ Then evaluate any color expression as needed.
 
 To get an idea of the progress:
 ```shell
-grep -RE '(darken|fade|contrast|lighten|mix)\(' src/less/theme/ | wc -l
+grep --color=auto -RE '[^/](darken|fade|contrast|lighten|mix)\(' src/less/theme/ | wc -l
 ```
