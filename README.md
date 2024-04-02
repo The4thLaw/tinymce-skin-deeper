@@ -44,6 +44,7 @@ Random CSS colors can be retrieved from https://www.color-hex.com/random.php or 
 
 To evaluate original Oxide expressions, go to https://lesscss.org/less-preview/ and paste the following:
 ```css
+@background-color: #fff;
 @border-color: #eee;
 @button-background-color: @color-tint;
 @button-enabled-background-color: darken(@button-background-color, 10%);
@@ -58,5 +59,5 @@ Then evaluate any color expression as needed.
 
 To get an idea of the progress:
 ```shell
-grep --color=auto -RE '[^/](darken|fade|contrast|lighten|mix)\(' src/less/theme/ | wc -l
+grep --color=auto -RE '[^/](darken|fade|contrast|lighten|mix|multiply)\(' src/less/theme/ | wc -l
 ```
