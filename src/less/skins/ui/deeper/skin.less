@@ -4,9 +4,8 @@
 // From globals/global-variables
 //@background-color: var(--dpr-background-color);
 @background-color: red;
-//@color-tint: var(--dpr-color-tint);
-@color-tint: blue;
 @border-color: var(--dpr-border-color);
+@color-tint: var(--dpr-color-tint);
 
 // From globals/globals.less
 @tinymce-separator-color: var(--dpr-separator-color);
@@ -23,11 +22,31 @@
 @button-hover-background-color: var(--dpr-button-hover-background-color);
 @button-disabled-text-color: var(--button-disabled-text-color);
 
+// From components/button/button-secondary.less
+@button-secondary-enabled-background-color: var(--dpr-button-secondary-enabled-background-color);
+@button-secondary-enabled-active-background-color: var(--dpr-button-secondary-enabled-active-background-color);
+@button-secondary-enabled-hover-background-color: var(--dpr-button-secondary-enabled-hover-background-color);
+
 // From components/collection/collection.less
 @collection-group-label-background-color: var(--dpr-collection-group-label-background-color);
 
 // From components/dialog/dialog.less
+@dialog-body-link-active-color: var(--dpr-dialog-body-link-active-color);
+@dialog-body-link-hover-color: var(--dpr-dialog-body-link-hover-color);
+@dialog-nav-focus-background-color: var(--dpr-dialog-nav-focus-background-color);
 @dialog-table-border-color: var(--dpr-dialog-table-border-color);
+
+// From components/revisionhistory/revisionhistory.less
+@revisionhistory-card-active-background-color: var(--dpr-revisionhistory-card-active-background-color);
+
+// From components/slider/slider.less
+@slider-handle-border: 2px solid var(--dpr-slider-handle-border);
+
+// From components/toolbar-button/toolbar-button.less
+@toolbar-button-enabled-background-color: var(--dpr-toolbar-button-enabled-background-color);
+
+// From components/tree/tree-button.less
+@tree-button-enabled-background-color: var(--dpr-tree-button-enabled-background-color);
 
 // Vuetify bindings
 // TODO: extract the Vuetify and oxide bindings to their own CSS
@@ -46,8 +65,8 @@
 :root {
   // From globals/global-variables
   --dpr-background-color: #fff;
-  --dpr-color-tint: #006ce7;
   --dpr-border-color: #eee;
+  --dpr-color-tint: #006ce7;
 
   // From globals/globals.less
   --dpr-separator-color: #e3e3e3;
@@ -64,9 +83,29 @@
   --dpr-button-hover-background-color: #0060ce;
   --dpr-button-disabled-text-color: rgba(255, 255, 255, 0.5);
 
+  // From components/button/button-secondary.less
+  --dpr-button-secondary-enabled-background-color: #a8c8ed;
+  --dpr-button-secondary-enabled-active-background-color: #7eade4;
+  --dpr-button-secondary-enabled-hover-background-color: #93bbe9;
+
   // From components/collection/collection.less
   --dpr-collection-group-label-background-color: #fdfdfd;
 
   // From components/dialog/dialog.less
+  --dpr-dialog-body-link-active-color: #00244e;
+  --dpr-dialog-body-link-hover-color: #003c81;
+  --dpr-dialog-nav-focus-background-color: rgba(0, 108, 231, 0.1);
   --dpr-dialog-table-border-color: #626262;
+
+  // From components/revisionhistory/revisionhistory.less
+  --dpr-revisionhistory-card-active-background-color: #a6ccf7;
+
+  // From components/slider/slider.less
+  --dpr-slider-handle-border: #0054b4;
+
+  // From components/toolbar-button/toolbar-button.less
+  --dpr-toolbar-button-enabled-background-color: #a6ccf7;
+
+  // From components/tree/tree-button.less
+  --dpr-tree-button-enabled-background-color: #a6ccf7;
 }
