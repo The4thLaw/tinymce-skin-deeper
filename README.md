@@ -48,7 +48,14 @@ To evaluate original Oxide expressions, go to https://lesscss.org/less-preview/ 
 @border-color: #eee;
 @button-background-color: @color-tint;
 @button-enabled-background-color: darken(@button-background-color, 10%);
+@color-black: #222f3e;
 @color-tint: #006ce7;
+@color-white: #fff;
+@text-color: contrast(@background-color, @color-black, @color-white);
+
+.bg-luma-checker(@color-light, @color-dark) {
+  @result: if((luma(@background-color) > 50%), @color-light, @color-dark);
+}
 
 .eval {
 	color: /* TODO */;

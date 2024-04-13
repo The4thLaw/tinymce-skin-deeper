@@ -2,8 +2,8 @@
 
 // Root variables
 // From globals/global-variables
-//@background-color: var(--dpr-background-color);
-@background-color: red;
+@background-color: var(--dpr-background-color);
+//@background-color: red;
 @border-color: var(--dpr-border-color);
 @color-tint: var(--dpr-color-tint);
 
@@ -21,6 +21,11 @@
 @button-enabled-hover-background-color: var(--dpr-button-enabled-hover-background-color);
 @button-hover-background-color: var(--dpr-button-hover-background-color);
 @button-disabled-text-color: var(--dpr-button-disabled-text-color);
+
+// From components/button/button-naked.less
+@button-naked-active-background-color: var(--dpr-button-naked-active-background-color);
+@button-naked-disabled-icon-color: var(--dpr-button-naked-disabled-icon-color);
+@button-naked-hover-background-color: var(--dpr-button-naked-hover-background-color);
 
 // From components/button/button-secondary.less
 @button-secondary-background-color: var(--dpr-button-secondary-background-color);
@@ -87,6 +92,11 @@
   --dpr-button-enabled-hover-background-color: #00489b;
   --dpr-button-hover-background-color: #0060ce;
   --dpr-button-disabled-text-color: rgba(255, 255, 255, 0.5);
+
+  // From components/button/button-naked.less
+  --dpr-button-naked-active-background-color: rgba(34, 47, 62, 0.18);
+  --dpr-button-naked-disabled-icon-color: rgba(34, 47, 62, 0.5);
+  --dpr-button-naked-hover-background-color: rgba(34, 47, 62, 0.12);
 
   // From components/button/button-secondary.less
   --dpr-button-secondary-background-color: #f0f0f0;
