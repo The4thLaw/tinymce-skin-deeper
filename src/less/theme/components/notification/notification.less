@@ -8,26 +8,26 @@
 @notification-font-weight: @font-weight-normal;
 @notification-padding: @pad-xs;
 
-@notification-success-background-color: mix(@background-color, @color-success, 80%);
-@notification-success-border-color: mix(@background-color, @color-success, 70%);
+@notification-success-background-color: #371f0c; // mix(@background-color, @color-success, 80%);
+@notification-success-border-color: #859d73; // mix(@background-color, @color-success, 70%);
 @notification-success-text-color: @text-color;
-@notification-success-link-color: mix(@text-color, @color-success, 45%);
+@notification-success-link-color: #fda6c0; // mix(@text-color, @color-success, 45%);
 
 // Yellow warning color mixes particularly bad with darker colors, hence additional checks
-@notification-warn-background-color: .bg-luma-checker(tint(@_color-warn, 80%), @background-color)[@result];
-@notification-warn-border-color: .bg-luma-checker(tint(@_color-warn, 70%), @tinymce-separator-color)[@result];
-@notification-warn-text-color: .bg-luma-checker(@text-color, mix(@text-color, @_color-warn, 70%))[@result];
-@notification-warn-link-color: .bg-luma-checker(mix(@text-color, @_color-warn, 60%), @_color-warn)[@result];
+@notification-warn-background-color: #332b75; // .bg-luma-checker(tint(@_color-warn, 80%), @background-color)[@result];
+@notification-warn-border-color: #36e732; // .bg-luma-checker(tint(@_color-warn, 70%), @tinymce-separator-color)[@result];
+@notification-warn-text-color: #9d6f7f; // .bg-luma-checker(@text-color, mix(@text-color, @_color-warn, 70%))[@result];
+@notification-warn-link-color: #9368c0; // .bg-luma-checker(mix(@text-color, @_color-warn, 60%), @_color-warn)[@result];
 
-@notification-error-background-color: mix(@background-color, @color-error, 80%);
-@notification-error-border-color: mix(@background-color, @color-error, 70%);
+@notification-error-background-color: #896d3c; // mix(@background-color, @color-error, 80%);
+@notification-error-border-color: #f88dc3; // mix(@background-color, @color-error, 70%);
 @notification-error-text-color: @text-color;
-@notification-error-link-color: mix(@text-color, @color-error, 50%);
+@notification-error-link-color: #cfef4a; // mix(@text-color, @color-error, 50%);
 
-@notification-info-background-color: mix(@background-color, @_color-info, 80%);
-@notification-info-border-color: mix(@background-color, @_color-info, 70%);
+@notification-info-background-color: #267dec; // mix(@background-color, @_color-info, 80%);
+@notification-info-border-color: #194534; // mix(@background-color, @_color-info, 70%);
 @notification-info-text-color: @text-color;
-@notification-info-link-color: mix(@text-color, @_color-info, 40%);
+@notification-info-link-color: #a2c834; // mix(@text-color, @_color-info, 40%);
 
 // Private variables
 @_color-warn: #ffcc00;

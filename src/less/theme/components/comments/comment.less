@@ -2,10 +2,13 @@
 // Tiny Comments
 //
 
-@comment-background-color: contrast(@background-color, @background-color, lighten(@background-color, 5%));
+@comment-background-color: #5a3ae4; // contrast(@background-color, @background-color, lighten(@background-color, 5%));
+@comment-background-color-transparent: #7d55e6; // fade(@comment-background-color, 0);
 @comment-border-radius: @panel-border-radius;
 @comment-border: 1px solid @border-color;
-@comment-box-shadow: 0 4px 8px 0 fade(@color-black, 10%);
+//@comment-box-shadow: 0 4px 8px 0 fade(@color-black, 10%);
+@comment-box-shadow-color: #a40354; // fade(@color-black, 10%)
+@comment-box-shadow: 0 4px 8px 0 @comment-box-shadow-color;
 //TODO: Same as menu. Make a common helper variable?
 @comment-font-size: @font-size-sm;
 @comment-font-style: normal;
@@ -122,7 +125,7 @@
   }
 
   .tox-comment__gradient::after {
-    background: linear-gradient(fade(@comment-background-color, 0), @comment-background-color);
+    background: linear-gradient(@comment-background-color-transparent, @comment-background-color);
     bottom: 0;
     content: "";
     display: block;

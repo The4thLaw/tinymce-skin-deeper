@@ -3,11 +3,17 @@
 //
 
 @editor-header-border: none;
-@editor-header-box-shadow: 0 2px 2px -2px fade(@color-black, 10%), 0 8px 8px -4px fade(@color-black, 7%);
-@editor-header-sticky-box-shadow: 0 2px 2px -2px fade(@color-black, 20%), 0 8px 8px -4px fade(@color-black, 15%);
+//@editor-header-box-shadow: 0 2px 2px -2px fade(@color-black, 10%), 0 8px 8px -4px fade(@color-black, 7%);
+//@editor-header-sticky-box-shadow: 0 2px 2px -2px fade(@color-black, 20%), 0 8px 8px -4px fade(@color-black, 15%);
+@editor-header-box-shadow-color-1: #27f250; // fade(@color-black, 10%);
+@editor-header-box-shadow-color-2: #81126a; // fade(@color-black, 7%);
+@editor-header-sticky-box-shadow-color-1: #a85fdb; // fade(@color-black, 20%);
+@editor-header-sticky-box-shadow-color-2: #d7b5e6; // fade(@color-black, 15%);
+@editor-header-box-shadow: 0 2px 2px -2px @editor-header-box-shadow-color-1, 0 8px 8px -4px @editor-header-box-shadow-color-2;
+@editor-header-sticky-box-shadow: 0 2px 2px -2px @editor-header-sticky-box-shadow-color-1, 0 8px 8px -4px @editor-header-sticky-box-shadow-color-2;
 @editor-bottom-header-box-shadow: none;
 @editor-bottom-header-sticky-box-shadow: @editor-header-sticky-box-shadow;
-@editor-header-sticky-background-color: if((alpha(@toolbar-background-color) > 0), transparent, @background-color); // If @toolbar-background-color is set to transparent, then set the sticky toolbar background color to be another color to not be transparent over content.
+@editor-header-sticky-background-color: #6df131; // if((alpha(@toolbar-background-color) > 0), transparent, @background-color); // If @toolbar-background-color is set to transparent, then set the sticky toolbar background color to be another color to not be transparent over content.
 
 // private variables
 @_editor-bottom-header-separator-color: if(alpha(@menubar-separator-color) > 0, @menubar-separator-color, @tinymce-separator-color); // Use @menubar-separator-color if it is set, otherwise use default separator color

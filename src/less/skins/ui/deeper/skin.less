@@ -3,18 +3,39 @@
 // Root variables
 // From globals/global-variables
 @background-color: var(--dpr-background-color);
-//@background-color: red;
-@border-color: var(--dpr-border-color);
+@color-black: var(--dpr-color-black);
 @color-tint: var(--dpr-color-tint);
+@color-white: var(--dpr-color-white);
+@color-error: var(--dpr-color-error);
+@color-success: var(--dpr-color-success);
+
+@border-color: var(--dpr-border-color);
+
+@text-color: var(--dpr-text-color);
+@text-color-muted: var(--dpr-text-color-muted);
 
 // From globals/globals.less
 @tinymce-separator-color: var(--dpr-separator-color);
 
 // From components/accessibility-checker/accessibility-checker.less
 @accessibility-issue-info-heading-text-color: var(--dpr-accessibility-issue-info-heading-text-color);
+@accessibility-issue-info-body-text-color: var(--dpr-accessibility-issue-info-body-text-color);
 @accessibility-issue-info-background-color: var(--dpr-accessibility-issue-info-background-color);
 
+@accessibility-issue-warn-heading-text-color: var(--dpr-accessibility-issue-warn-heading-text-color);
+@accessibility-issue-warn-body-text-color: var(--dpr-accessibility-issue-warn-body-text-color);
+@accessibility-issue-warn-background-color: var(--dpr-accessibility-issue-warn-background-color);
+
+@accessibility-issue-error-heading-text-color: var(--dpr-accessibility-issue-error-heading-text-color);
+@accessibility-issue-error-body-text-color: var(--dpr-accessibility-issue-error-body-text-color);
+@accessibility-issue-error-background-color: var(--dpr-accessibility-issue-error-background-color);
+
+@accessibility-issue-success-heading-text-color: var(--dpr-accessibility-issue-success-heading-text-color);
+@accessibility-issue-success-body-text-color: var(--dpr-accessibility-issue-success-body-text-color);
+@accessibility-issue-success-background-color: var(--dpr-accessibility-issue-success-background-color);
+
 // From components/button/button.less
+@button-text-color: var(--dpr-button-text-color);
 @button-active-background-color: var(--dpr-button-active-background-color);
 @button-enabled-active-background-color: var(--dpr-button-enabled-active-background-color);
 @button-enabled-background-color: var(--dpr-button-enabled-background-color);
@@ -28,6 +49,7 @@
 @button-naked-hover-background-color: var(--dpr-button-naked-hover-background-color);
 
 // From components/button/button-secondary.less
+@button-secondary-text-color: var(--dpr-button-secondary-text-color);
 @button-secondary-background-color: var(--dpr-button-secondary-background-color);
 @button-secondary-disabled-text-color: var(--dpr-button-secondary-disabled-text-color);
 @button-secondary-enabled-background-color: var(--dpr-button-secondary-enabled-background-color);
@@ -36,27 +58,142 @@
 @button-secondary-active-background-color: var(--dpr-button-secondary-active-background-color);
 @button-secondary-hover-background-color: var(--dpr-button-secondary-hover-background-color);
 
+// From components/checkbox/checkbox.less
+@checkbox-unselected-color: var(--dpr-checkbox-unselected-color);
+@checkbox-disabled-text-color: var(--dpr-meta-control-disabled-text);
+
 // From components/collection/collection.less
+@collection-item-label-disabled-text-color: var(--dpr-collection-item-label-disabled-text-color);
+@collection-item-caret-disabled-text-color: var(--dpr-collection-item-caret-disabled-text-color);
+
+@collection-list-item-active-background-color: var(--dpr-collection-list-item-active-background-color);
+@collection-list-item-label-active-text-color: var(--dpr-collection-list-item-label-active-text-color);
+@collection-list-item-label-enabled-text-color: var(--dpr-collection-list-item-label-enabled-text-color);
+
+@collection-toolbar-item-label-active-text-color: var(--dpr-collection-toolbar-item-label-active-text-color);
+@collection-toolbar-item-label-active-hover-text-color: var(--dpr-collection-toolbar-item-label-active-hover-text-color);
+@collection-toolbar-item-label-enabled-text-color: var(--dpr-collection-toolbar-item-label-enabled-text-color);
+
+@collection-grid-item-label-active-text-color: var(--dpr-collection-grid-item-label-active-text-color);
+@collection-grid-item-label-enabled-text-color: var(--dpr-collection-grid-item-label-enabled-text-color);
+
 @collection-group-label-background-color: var(--dpr-collection-group-label-background-color);
+@collection-group-label-text-color: var(--dpr-collection-group-label-text-color);
+
+// From components/comment/comment.less
+@comment-background-color: var(--dpr-comment-background-color);
+@comment-background-color-transparent: var(--dpr-comment-background-color-transparent);
+@comment-box-shadow-color: var(--dpr-comment-box-shadow-color);
 
 // From components/dialog/dialog.less
 @dialog-background-color: var(--dpr-dialog-background-color);
+@dialog-backdrop-background-color: var(--dpr-dialog-backdrop-background-color);
 @dialog-body-link-active-color: var(--dpr-dialog-body-link-active-color);
 @dialog-body-link-hover-color: var(--dpr-dialog-body-link-hover-color);
 @dialog-nav-focus-background-color: var(--dpr-dialog-nav-focus-background-color);
 @dialog-table-border-color: var(--dpr-dialog-table-border-color);
+@dialog-box-shadow-color: var(--dpr-dialog-box-shadow-color);
+
+// From components/editor/editor.less
+@editor-header-sticky-background-color: var(--dpr-editor-header-sticky-background-color);
+@editor-header-box-shadow-color-1: var(--dpr-editor-header-box-shadow-color-1);
+@editor-header-box-shadow-color-2: var(--dpr-editor-header-box-shadow-color-2);
+@editor-header-sticky-box-shadow-color-1: var(--dpr-editor-header-sticky-box-shadow-color-1);
+@editor-header-sticky-box-shadow-color-2: var(--dpr-editor-header-sticky-box-shadow-color-2);
+
+// From components/form/color.less
+@color-input-swatch-checker-color: var(--dpr-color-input-swatch-checker-color);
+@color-input-border-color: var(--dpr-color-input-border-color);
+
+// From components/form/listbox.less
+@listbox-disabled-background-color: var(--dpr-listbox-disabled-background-color);
+@listbox-disabled-text-color: var(--dpr-listbox-disabled-text-color);
+@listbox-button-chevron-color: var(--dpr-listbox-button-chevron-color);
+
+// From components/form/select.less
+@selectbox-disabled-background-color: var(--dpr-selectbox-disabled-background-color);
+@selectbox-disabled-text-color: var(--dpr-selectbox-disabled-text-color);
+
+// From components/form/textfield.less
+@textfield-background-color: var(--dpr-textfield-background-color);
+@textfield-disabled-background-color: var(--dpr-textfield-disabled-background-color);
+@textfield-disabled-text-color: var(--dpr-textfield-disabled-text-color);
+
+// From components/insert-table-picker/insert-table-picker.less
+@insert-table-picker-label-color: var(--dpr-insert-table-picker-label-color);
+
+// From components/menu/menu.less
+@menu-background-color: var(--dpr-menu-background-color);
+@menu-box-shadow-color-1: var(--dpr-menu-box-shadow-color-1);
+@menu-box-shadow-color-2: var(--dpr-menu-box-shadow-color-2);
+
+// From components/menubar/menubar.less
+@menubar-background-color: var(--dpr-menubar-background-color);
+
+// From components/menubar/menubar-buttons.less
+@menubar-select-disabled-text-color: var(--dpr-menubar-select-disabled-text-color);
+
+// From components/notification/notification.less
+@notification-success-background-color: var(--dpr-notification-success-background-color);
+@notification-success-border-color: var(--dpr-notification-success-border-color);
+@notification-success-link-color: var(--dpr-notification-success-link-color);
+@notification-warn-background-color: var(--dpr-notification-warn-background-color);
+@notification-warn-border-color: var(--dpr-notification-warn-border-color);
+@notification-warn-text-color: var(--dpr-notification-warn-text-color);
+@notification-warn-link-color: var(--dpr-notification-warn-link-color);
+@notification-error-background-color: var(--dpr-notification-error-background-color);
+@notification-error-border-color: var(--dpr-notification-error-border-color);
+@notification-error-link-color: var(--dpr-notification-error-link-color);
+@notification-info-background-color: var(--dpr-notification-info-background-color);
+@notification-info-border-color: var(--dpr-notification-info-border-color);
+@notification-info-link-color: var(--dpr-notification-info-link-color);
+
+// From components/pop/pop.less
+@pop-box-shadow-color-1: var(--dpr-pop-box-shadow-color-1);
+@pop-box-shadow-color-2: var(--dpr-pop-box-shadow-color-2);
 
 // From components/revisionhistory/revisionhistory.less
+@revisionhistory-background-color: var(--dpr-revisionhistory-background-color);
 @revisionhistory-card-active-background-color: var(--dpr-revisionhistory-card-active-background-color);
 
 // From components/slider/slider.less
 @slider-handle-border: 2px solid var(--dpr-slider-handle-border);
 
+// From components/statusbar/statusbar.less
+@statusbar-text-color: var(--dpr-dpr-statusbar-text-color);
+@statusbar-logo-color: var(--dpr-statusbar-logo-color);
+@statusbar-resize-handle-color: var(--dpr-statusbar-resize-handle-color);
+
+// From components/throbber/throbber.less
+@throbber-busy-background-color: var(--dpr-throbber-busy-background-color);
+
+// From components/toolbar/toolbar.less
+@toolbar-background-color: var(--dpr-toolbar-background-color);
+
 // From components/toolbar-button/toolbar-button.less
+@toolbar-button-background-color: var(--dpr-toolbar-button-background-color);
+@toolbar-button-icon-color: var(--dpr-toolbar-button-icon-color);
+@toolbar-button-text-color: var(--dpr-toolbar-button-text-color);
 @toolbar-button-enabled-background-color: var(--dpr-toolbar-button-enabled-background-color);
+@toolbar-button-hover-background-color: var(--dpr-toolbar-button-hover-background-color);
+@toolbar-button-chevron-color: var(--dpr-toolbar-button-chevron-color);
+@toolbar-button-disabled-icon-color: var(--dpr-toolbar-button-disabled-icon-color);
+@toolbar-button-disabled-text-color: var(--dpr-toolbar-button-disabled-text-color);
+
+// From components/toolbar-button/toolbar-select-button.less
+@toolbar-button-bespoke-background-color: var(--dpr-toolbar-button-bespoke-background-color);
 
 // From components/tree/tree-button.less
 @tree-button-enabled-background-color: var(--dpr-tree-button-enabled-background-color);
+@tree-button-icon-color: var(--dpr-tree-button-icon-color);
+@tree-button-chevron-color: var(--dpr-tree-button-chevron-color);
+@tree-button-menu-icon-color: var(--dpr-tree-button-menu-icon-color);
+@tree-button-text-color: var(--dpr-tree-button-text-color);
+@tree-button-disabled-icon-color: var(--dpr-tree-button-disabled-icon-color);
+@tree-button-disabled-text-color: var(--dpr-tree-button-disabled-text-color);
+
+// From theme/content/mergetag.less
+@mergetag-hover-background-color: var(--dpr-mergetag-hover-background-color);
 
 // Vuetify bindings
 // TODO: extract the Vuetify and oxide bindings to their own CSS
@@ -73,19 +210,44 @@
 
 // Oxide bindings
 :root {
+  // Meta variables to limit duplication
+  --dpr-meta-muted-base: 34, 47, 62;
+  --dpr-meta-control-disabled-text: rgba(var(--dpr-meta-muted-base), 0.5);
+
   // From globals/global-variables
   --dpr-background-color: #fff;
-  --dpr-border-color: #eee;
+  --dpr-color-black: #222f3e;
   --dpr-color-tint: #006ce7;
+  --dpr-color-white: #fff;
+  --dpr-color-error: #c00;
+  --dpr-color-success: #78AB46;
+
+  --dpr-border-color: #eee;
+  --dpr-text-color: #222f3e;
+  --dpr-text-color-muted: rgba(var(--dpr-meta-muted-base), 0.7);
 
   // From globals/globals.less
   --dpr-separator-color: #e3e3e3;
 
   // From components/accessibility-checker/accessibility-checker.less
   --dpr-accessibility-issue-info-heading-text-color: #006ce7;
+  --dpr-accessibility-issue-info-body-text-color: var(--dpr-text-color);
   --dpr-accessibility-issue-info-background-color: rgba(0, 101, 216, 0.1);
 
+  --dpr-accessibility-issue-warn-heading-text-color: #8f5d00;
+  --dpr-accessibility-issue-warn-body-text-color: var(--dpr-text-color);
+  --dpr-accessibility-issue-warn-background-color: rgba(255, 165, 0, 0.08);
+
+  --dpr-accessibility-issue-error-heading-text-color: #c00;
+  --dpr-accessibility-issue-error-body-text-color: var(--dpr-text-color);
+  --dpr-accessibility-issue-error-background-color: rgba(204, 0, 0, 0.1);
+  
+  --dpr-accessibility-issue-success-heading-text-color: #527530;
+  --dpr-accessibility-issue-success-body-text-color: var(--dpr-text-color);
+  --dpr-accessibility-issue-success-background-color: rgba(120, 171, 70, 0.1);
+
   // From components/button/button.less
+  --dpr-button-text-color: #fff;
   --dpr-button-active-background-color: #0054b4;
   --dpr-button-enabled-active-background-color: #0054b4;
   --dpr-button-enabled-background-color: #0054b4;
@@ -94,38 +256,154 @@
   --dpr-button-disabled-text-color: rgba(255, 255, 255, 0.5);
 
   // From components/button/button-naked.less
-  --dpr-button-naked-active-background-color: rgba(34, 47, 62, 0.18);
-  --dpr-button-naked-disabled-icon-color: rgba(34, 47, 62, 0.5);
-  --dpr-button-naked-hover-background-color: rgba(34, 47, 62, 0.12);
+  --dpr-button-naked-active-background-color: rgba(var(--dpr-meta-muted-base), 0.18);
+  --dpr-button-naked-disabled-icon-color: var(--dpr-meta-control-disabled-text);
+  --dpr-button-naked-hover-background-color: rgba(var(--dpr-meta-muted-base), 0.12);
 
   // From components/button/button-secondary.less
+  --dpr-button-secondary-text-color: var(--dpr-text-color);
   --dpr-button-secondary-background-color: #f0f0f0;
-  --dpr-button-secondary-disabled-text-color: rgba(34, 47, 62, 0.5);
+  --dpr-button-secondary-disabled-text-color: var(--dpr-meta-control-disabled-text);
   --dpr-button-secondary-enabled-background-color: #a8c8ed;
   --dpr-button-secondary-enabled-active-background-color: #7eade4;
   --dpr-button-secondary-enabled-hover-background-color: #93bbe9;
   --dpr-button-secondary-active-background-color: #d6d6d6;
   --dpr-button-secondary-hover-background-color: #e3e3e3;
 
+  // From components/checkbox/checkbox.less
+  --dpr-checkbox-unselected-color: rgba(var(--dpr-meta-muted-base), 0.3);
+  --dpr-checkbox-disabled-text-color: var(--dpr-meta-control-disabled-text);
+
   // From components/collection/collection.less
+  --dpr-collection-item-label-disabled-text-color: var(--dpr-meta-control-disabled-text);
+  --dpr-collection-item-caret-disabled-text-color: var(--dpr-meta-control-disabled-text);
+
+  --dpr-collection-list-item-active-background-color: var(--dpr-color-tint);
+  --dpr-collection-list-item-label-active-text-color: #fff;
+  --dpr-collection-list-item-label-enabled-text-color: var(--dpr-text-color);
+
+  --dpr-collection-toolbar-item-label-active-text-color: var(--dpr-text-color);
+  --dpr-collection-toolbar-item-label-active-hover-text-color: var(--dpr-text-color);
+  --dpr-collection-toolbar-item-label-enabled-text-color: var(--dpr-text-color);
+
+  --dpr-collection-grid-item-label-active-text-color: var(--dpr-text-color);
+  --dpr-collection-grid-item-label-enabled-text-color: var(--dpr-text-color);
+
   --dpr-collection-group-label-background-color: #fdfdfd;
+  --dpr-collection-group-label-text-color: rgba(var(--dpr-meta-muted-base), 0.7);
+
+  // From components/comment/comment.less
+  --dpr-comment-background-color: #fff;
+  --dpr-comment-background-color-transparent: #ffffff00;
+  --dpr-comment-box-shadow-color: rgba(var(--dpr-meta-muted-base), 0.1);
 
   // From components/dialog/dialog.less
   --dpr-dialog-background-color: #fff;
+  --dpr-dialog-backdrop-background-color: rgba(255, 255, 255, 0.75);
   --dpr-dialog-body-link-active-color: #00244e;
   --dpr-dialog-body-link-hover-color: #003c81;
   --dpr-dialog-nav-focus-background-color: rgba(0, 108, 231, 0.1);
   --dpr-dialog-table-border-color: #626262;
+  --dpr-dialog-box-shadow-color: rgba(var(--dpr-meta-muted-base), 0.15);
+
+  // From components/editor/editor.less
+  --dpr-editor-header-sticky-background-color: transparent;
+  --dpr-editor-header-box-shadow-color-1: rgba(var(--dpr-meta-muted-base), 0.1);
+  --dpr-editor-header-box-shadow-color-2: rgba(var(--dpr-meta-muted-base), 0.07);
+  --dpr-editor-header-sticky-box-shadow-color-1: rgba(var(--dpr-meta-muted-base), 0.2);
+  --dpr-editor-header-sticky-box-shadow-color-2: rgba(var(--dpr-meta-muted-base), 0.15);
+
+  // From components/form/color.less
+  --dpr-color-input-swatch-checker-color: rgba(0, 0, 0, 0.25);
+  --dpr-color-input-border-color: rgba(var(--dpr-meta-muted-base), 0.2);
+
+  // From components/form/listbox.less
+  --dpr-listbox-disabled-background-color: #f2f2f2;
+  --dpr-listbox-disabled-text-color: rgba(var(--dpr-meta-muted-base), 0.85);
+  --dpr-listbox-button-chevron-color: var(--dpr-text-color);
+
+  // From components/form/select.less
+  --dpr-selectbox-disabled-background-color: #f2f2f2;
+  --dpr-selectbox-disabled-text-color: rgba(var(--dpr-meta-muted-base), 0.85);
+
+  // From components/form/textfield.less
+  --dpr-textfield-background-color: #fff;
+  --dpr-textfield-disabled-background-color: #f2f2f2;
+  --dpr-textfield-disabled-text-color: rgba(var(--dpr-meta-muted-base), 0.85);
+
+  // From components/insert-table-picker/insert-table-picker.less
+  --dpr-insert-table-picker-label-color: rgba(var(--dpr-meta-muted-base), 0.7);
+
+  // From components/menu/menu.less
+  --dpr-menu-background-color: #fff;
+  --dpr-menu-box-shadow-color-1:  rgba(var(--dpr-meta-muted-base), 0.2);
+  --dpr-menu-box-shadow-color-2:  rgba(var(--dpr-meta-muted-base), 0.15);
+
+  // From components/menubar/menubar.less
+  --dpr-menubar-background-color: var(--dpr-background-color);
+
+  // From components/menubar/menubar-buttons.less
+  --dpr-menubar-select-disabled-text-color: var(--dpr-meta-control-disabled-text);
+
+  // From components/notification/notification.less
+  --dpr-notification-success-background-color: #e4eeda;
+  --dpr-notification-success-border-color: #d7e6c8;
+  --dpr-notification-success-link-color: #b5d199;
+  --dpr-notification-warn-background-color: #fff5cc;
+  --dpr-notification-warn-border-color: #fff0b3;
+  --dpr-notification-warn-text-color: var(--dpr-text-color);
+  --dpr-notification-warn-link-color: #7a6e25;
+  --dpr-notification-error-background-color: #f5cccc;
+  --dpr-notification-error-border-color: #f0b3b3;
+  --dpr-notification-error-link-color: #77181f;
+  --dpr-notification-info-background-color: #d6e7fb;
+  --dpr-notification-info-border-color: #c1dbf9;
+  --dpr-notification-info-link-color: #2a64a6;
+
+  // From components/pop/pop.less
+  --dpr-pop-box-shadow-color-1: rgba(var(--dpr-meta-muted-base), 0.2);
+  --dpr-pop-box-shadow-color-2: rgba(var(--dpr-meta-muted-base), 0.15);
 
   // From components/revisionhistory/revisionhistory.less
+  --dpr-revisionhistory-background-color: #fff;
   --dpr-revisionhistory-card-active-background-color: #a6ccf7;
 
   // From components/slider/slider.less
   --dpr-slider-handle-border: #0054b4;
 
+  // From components/statusbar/statusbar.less
+  --dpr-statusbar-text-color: rgba(var(--dpr-meta-muted-base), 0.7);
+  --dpr-statusbar-logo-color: rgba(var(--dpr-meta-muted-base), 0.8);
+  --dpr-statusbar-resize-handle-color: rgba(var(--dpr-meta-muted-base), 0.5);
+
+  // From components/throbber/throbber.less
+  --dpr-throbber-busy-background-color: rgba(255, 255, 255, 0.6);
+
+  // From components/toolbar/toolbar.less
+  --dpr-toolbar-background-color: var(--dpr-background-color);
+
   // From components/toolbar-button/toolbar-button.less
+  --dpr-toolbar-button-background-color: var(--dpr-background-color);
+  --dpr-toolbar-button-icon-color: var(--dpr-text-color);
+  --dpr-toolbar-button-text-color: var(--dpr-text-color);
   --dpr-toolbar-button-enabled-background-color: #a6ccf7;
+  --dpr-toolbar-button-hover-background-color: #f0f0f0;
+  --dpr-toolbar-button-chevron-color: rgba(var(--dpr-meta-muted-base), 0.5);
+  --dpr-toolbar-button-disabled-icon-color: var(--dpr-meta-control-disabled-text);
+  --dpr-toolbar-button-disabled-text-color: var(--dpr-meta-control-disabled-text);
+
+  // From components/toolbar-button/toolbar-select-button.less
+  --dpr-toolbar-button-bespoke-background-color: #f7f7f7;
 
   // From components/tree/tree-button.less
   --dpr-tree-button-enabled-background-color: #a6ccf7;
+  --dpr-tree-button-icon-color: var(--dpr-text-color);
+  --dpr-tree-button-chevron-color: rgba(var(--dpr-meta-muted-base), 0.5);
+  --dpr-tree-button-menu-icon-color: var(--dpr-text-color);
+  --dpr-tree-button-text-color: var(--dpr-text-color);
+  --dpr-tree-button-disabled-icon-color: var(--dpr-meta-control-disabled-text);
+  --dpr-tree-button-disabled-text-color: var(--dpr-meta-control-disabled-text);
+
+  // From theme/content/mergetag.less
+  --dpr-mergetag-hover-background-color: rgba(0, 108, 231, 0.1);
 }

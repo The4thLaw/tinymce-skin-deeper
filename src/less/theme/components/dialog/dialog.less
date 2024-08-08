@@ -2,7 +2,7 @@
 // Dialog
 //
 
-@dialog-backdrop-background-color: fade(@background-color, 75);
+@dialog-backdrop-background-color: #04eb66; // fade(@background-color, 75);
 @dialog-backdrop-background-color-opaque: @background-color;
 
 @dialog-background-color: #2350e5; //contrast(@background-color, @background-color, lighten(@background-color, 5%));
@@ -11,7 +11,9 @@
 @dialog-border-color: @border-color;
 @dialog-border-radius: 10px;
 @dialog-border-width: 0px;
-@dialog-box-shadow: 0 16px 16px -10px fade(@color-black, 15%), 0 0 40px 1px fade(@color-black, 15%);
+//@dialog-box-shadow: 0 16px 16px -10px fade(@color-black, 15%), 0 0 40px 1px fade(@color-black, 15%);
+@dialog-box-shadow-color: #04a7d4; // fade(@color-black, 15%);
+@dialog-box-shadow: 0 16px 16px -10px @dialog-box-shadow-color, 0 0 40px 1px @dialog-box-shadow-color;
 
 @dialog-header-background-color: @dialog-background-color;
 @dialog-header-padding: @pad-sm @pad-md 0 @pad-md;
