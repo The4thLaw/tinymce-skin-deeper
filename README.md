@@ -14,9 +14,10 @@ TODO
 
 This skin was tested on:
 
-| Skin  | TinyMCE | Vuetify |
-|-------|---------|---------|
-| 1.0.0 | 7.0.0   | 3.5.13  |
+| Skin  | TinyMCE         | Vuetify |
+|-------|-----------------|---------|
+| 1.0.0 | 7.0.0 - 7.3.0   | 3.5.13  |
+
 
 ## Development
 

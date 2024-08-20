@@ -1,203 +1,238 @@
 // Vuetify bindings for Deeper
 
-// TODO: @tooltip-background-color
-
 :root {
   // Meta variables to limit duplication
   --dpr-meta-control-disabled-text: rgba(var(--v-theme-on-surface), var(--v-disabled-opacity));
 
   // From globals/global-variables
-  --dpr-background-color: rgb(var(--v-theme-surface-light));
+  --dpr-background-color: rgb(var(--v-theme-surface));
   --dpr-color-black: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
   --dpr-color-tint: rgb(var(--v-theme-primary));
   --dpr-color-white: #fff;
   --dpr-color-error: rgb(var(--v-theme-error));
   --dpr-color-error: rgb(var(--v-theme-success));
-
-  /*--dpr-border-color: #eee;*/
+  //
+  --dpr-border-color: rgba(var(--v-border-color), var(--v-border-opacity));
   --dpr-text-color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
   --dpr-text-color-muted: rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity));
 
   // From globals/globals.less
-  /*--dpr-separator-color: #e3e3e3;
+  --dpr-separator-color: gray; // No variable in Vuetify
 
   // From components/accessibility-checker/accessibility-checker.less
-  --dpr-accessibility-issue-info-heading-text-color: #006ce7;
-  --dpr-accessibility-issue-info-body-text-color: var(--dpr-text-color);
-  --dpr-accessibility-issue-info-background-color: rgba(0, 101, 216, 0.1);
-
-  --dpr-accessibility-issue-warn-heading-text-color: #8f5d00;
-  --dpr-accessibility-issue-warn-body-text-color: var(--dpr-text-color);
-  --dpr-accessibility-issue-warn-background-color: rgba(255, 165, 0, 0.08);
-
-  --dpr-accessibility-issue-error-heading-text-color: #c00;
-  --dpr-accessibility-issue-error-body-text-color: var(--dpr-text-color);
-  --dpr-accessibility-issue-error-background-color: rgba(204, 0, 0, 0.1);
-  
-  --dpr-accessibility-issue-success-heading-text-color: #527530;
-  --dpr-accessibility-issue-success-body-text-color: var(--dpr-text-color);
-  --dpr-accessibility-issue-success-background-color: rgba(120, 171, 70, 0.1);
+  --dpr-accessibility-issue-info-heading-text-color: rgb(var(--v-theme-info));
+  --dpr-accessibility-issue-info-body-text-color: rgb(var(--v-theme-info));
+  --dpr-accessibility-issue-info-background-color: rgba(var(--v-theme-info), var(--v-activated-opacity));
+  //
+  --dpr-accessibility-issue-warn-heading-text-color: rgb(var(--v-theme-warning));
+  --dpr-accessibility-issue-warn-body-text-color: rgb(var(--v-theme-warning));
+  --dpr-accessibility-issue-warn-background-color: rgba(var(--v-theme-warning), var(--v-activated-opacity));
+  //
+  --dpr-accessibility-issue-error-heading-text-color: rgb(var(--v-theme-error));
+  --dpr-accessibility-issue-error-body-text-color: rgb(var(--v-theme-error));
+  --dpr-accessibility-issue-error-background-color: rgba(var(--v-theme-error), var(--v-activated-opacity));
+  //
+  --dpr-accessibility-issue-success-heading-text-color: rgb(var(--v-theme-success));
+  --dpr-accessibility-issue-success-body-text-color: rgb(var(--v-theme-success));
+  --dpr-accessibility-issue-success-background-color: rgba(var(--v-theme-success), var(--v-activated-opacity));
 
   // From components/button/button.less
-  --dpr-button-text-color: #fff;
-  --dpr-button-active-background-color: #0054b4;
-  --dpr-button-enabled-active-background-color: #0054b4;
-  --dpr-button-enabled-background-color: #0054b4;
-  --dpr-button-enabled-hover-background-color: #00489b;
-  --dpr-button-hover-background-color: #0060ce;
-  --dpr-button-disabled-text-color: rgba(255, 255, 255, 0.5);
+  --dpr-button-background-color: rgb(var(--v-theme-primary));
+  --dpr-button-text-color: rgb(var(--v-theme-on-primary));
+  --dpr-button-active-background-color: rgba(var(--v-theme-primary), calc(1 - var(--v-hover-opacity) * var(--v-theme-overlay-multiplier)));
+  --dpr-button-enabled-active-background-color: rgba(var(--v-theme-primary), calc(1 - var(--v-hover-opacity) * var(--v-theme-overlay-multiplier)));
+  --dpr-button-enabled-background-color: rgba(var(--v-theme-primary), calc(1 - var(--v-hover-opacity) * var(--v-theme-overlay-multiplier)));
+  --dpr-button-enabled-hover-background-color: rgba(var(--v-theme-primary), calc(1 - var(--v-hover-opacity) * var(--v-theme-overlay-multiplier)));
+  --dpr-button-hover-background-color: rgba(var(--v-theme-primary), calc(1 - var(--v-hover-opacity) * var(--v-theme-overlay-multiplier)));
+  --dpr-button-disabled-text-color: rgba(var(--v-theme-on-primary), var(--v-medium-emphasis-opacity));
 
   // From components/button/button-naked.less
-  --dpr-button-naked-active-background-color: rgba(var(--dpr-meta-muted-base), 0.18);
+  --dpr-button-naked-active-background-color: rgba(var(--v-theme-primary), var(--v-activated-opacity));
   --dpr-button-naked-disabled-icon-color: var(--dpr-meta-control-disabled-text);
-  --dpr-button-naked-hover-background-color: rgba(var(--dpr-meta-muted-base), 0.12);
+  --dpr-button-naked-hover-background-color: rgba(var(--v-theme-primary), var(--v-selected-opacity));
+  --dpr-button-naked-disabled-background-color: transparent;
 
   // From components/button/button-secondary.less
-  --dpr-button-secondary-text-color: var(--dpr-text-color);
-  --dpr-button-secondary-background-color: #f0f0f0;
+  --dpr-button-secondary-text-color: rgb(var(--v-theme-primary));
+  --dpr-button-secondary-background-color: transparent;
   --dpr-button-secondary-disabled-text-color: var(--dpr-meta-control-disabled-text);
-  --dpr-button-secondary-enabled-background-color: #a8c8ed;
-  --dpr-button-secondary-enabled-active-background-color: #7eade4;
-  --dpr-button-secondary-enabled-hover-background-color: #93bbe9;
-  --dpr-button-secondary-active-background-color: #d6d6d6;
-  --dpr-button-secondary-hover-background-color: #e3e3e3;
+  --dpr-button-secondary-enabled-background-color: transparent;
+  --dpr-button-secondary-enabled-active-background-color: rgba(var(--v-theme-primary), var(--v-idle-opacity));
+  --dpr-button-secondary-enabled-hover-background-color: rgba(var(--v-theme-primary), var(--v-idle-opacity));
+  --dpr-button-secondary-active-background-color: rgba(var(--v-theme-primary), var(--v-idle-opacity));
+  --dpr-button-secondary-hover-background-color: rgba(var(--v-theme-primary), var(--v-idle-opacity));
+  --dpr-button-secondary-border-color: rgb(var(--v-theme-primary));
+  --dpr-button-secondary-hover-border-color: var(--dpr-button-secondary-border-color);
 
   // From components/checkbox/checkbox.less
-  --dpr-checkbox-unselected-color: rgba(var(--dpr-meta-muted-base), 0.3);
+  --dpr-checkbox-unselected-color: rgba(var(--v-border-color), .38);
   --dpr-checkbox-disabled-text-color: var(--dpr-meta-control-disabled-text);
 
   // From components/collection/collection.less
   --dpr-collection-item-label-disabled-text-color: var(--dpr-meta-control-disabled-text);
-  --dpr-collection-item-caret-disabled-text-color: var(--dpr-meta-control-disabled-text);*/
-
-  --dpr-collection-list-item-active-background-color: rgba(var(--v-theme-on-surface-light), calc(var(--v-high-emphasis-opacity) * var(--v-hover-opacity) * var(--v-theme-overlay-multiplier)));
-  /*--dpr-collection-list-item-label-active-text-color: #fff;
+  --dpr-collection-item-caret-disabled-text-color: var(--dpr-meta-control-disabled-text);
+  //
+  --dpr-collection-list-item-active-background-color: rgba(var(--v-theme-on-surface), calc(var(--v-high-emphasis-opacity) * var(--v-hover-opacity) * var(--v-theme-overlay-multiplier)));
+  --dpr-collection-list-item-label-active-text-color: var(--dpr-text-color);
   --dpr-collection-list-item-label-enabled-text-color: var(--dpr-text-color);
-
+  //
   --dpr-collection-toolbar-item-label-active-text-color: var(--dpr-text-color);
   --dpr-collection-toolbar-item-label-active-hover-text-color: var(--dpr-text-color);
   --dpr-collection-toolbar-item-label-enabled-text-color: var(--dpr-text-color);
-
+  //
   --dpr-collection-grid-item-label-active-text-color: var(--dpr-text-color);
   --dpr-collection-grid-item-label-enabled-text-color: var(--dpr-text-color);
-
-  --dpr-collection-group-label-background-color: #fdfdfd;
-  --dpr-collection-group-label-text-color: rgba(var(--dpr-meta-muted-base), 0.7);
+  //
+  --dpr-collection-group-label-background-color: rgb(var(--v-theme-surface-light));
+  --dpr-collection-group-label-text-color: rgb(var(--v-theme-on-surface-light));
 
   // From components/comment/comment.less
-  --dpr-comment-background-color: #fff;
-  --dpr-comment-background-color-transparent: #ffffff00;
-  --dpr-comment-box-shadow-color: rgba(var(--dpr-meta-muted-base), 0.1);
+  --dpr-comment-background-color: rgb(var(--v-theme-surface-light));
+  --dpr-comment-background-color-transparent: rgba(var(--v-theme-surface-light), 0);
+  --dpr-comment-box-shadow-color: rgba(0 0, 0, .1);
 
   // From components/dialog/dialog.less
-  --dpr-dialog-background-color: #fff;
-  --dpr-dialog-backdrop-background-color: rgba(255, 255, 255, 0.75);
-  --dpr-dialog-body-link-active-color: #00244e;
-  --dpr-dialog-body-link-hover-color: #003c81;
-  --dpr-dialog-nav-focus-background-color: rgba(0, 108, 231, 0.1);
-  --dpr-dialog-table-border-color: #626262;
-  --dpr-dialog-box-shadow-color: rgba(var(--dpr-meta-muted-base), 0.15);
+  --dpr-dialog-background-color: rgb(var(--v-theme-surface));
+  --dpr-dialog-backdrop-background-color: rgba(var(--v-theme-on-surface), var(--v-overlay-opacity, .32));
+  --dpr-dialog-body-link-active-color: rgb(var(--v-theme-secondary));
+  --dpr-dialog-body-link-hover-color: rgb(var(--v-theme-secondary));
+  --dpr-dialog-nav-focus-background-color: rgb(var(--v-theme-surface));
+  --dpr-dialog-table-border-color: var(--dpr-border-color);
+  --dpr-dialog-box-shadow-color: rgba(0, 0, 0, .15);
 
   // From components/editor/editor.less
   --dpr-editor-header-sticky-background-color: transparent;
-  --dpr-editor-header-box-shadow-color-1: rgba(var(--dpr-meta-muted-base), 0.1);
-  --dpr-editor-header-box-shadow-color-2: rgba(var(--dpr-meta-muted-base), 0.07);
-  --dpr-editor-header-sticky-box-shadow-color-1: rgba(var(--dpr-meta-muted-base), 0.2);
-  --dpr-editor-header-sticky-box-shadow-color-2: rgba(var(--dpr-meta-muted-base), 0.15);
+  --dpr-editor-header-box-shadow-color-1: rgba(0, 0, 0, .1);
+  --dpr-editor-header-box-shadow-color-2: rgba(0, 0, 0, .07);
+  --dpr-editor-header-sticky-box-shadow-color-1: rgba(0, 0, 0, .2);
+  --dpr-editor-header-sticky-box-shadow-color-2: rgba(0, 0, 0, .15);
 
   // From components/form/color.less
-  --dpr-color-input-swatch-checker-color: rgba(0, 0, 0, 0.25);
-  --dpr-color-input-border-color: rgba(var(--dpr-meta-muted-base), 0.2);
+  --dpr-color-input-swatch-checker-color: rgb(var(--v-theme-surface-variant));
+  --dpr-color-input-border-color: rgba(var(--v-border-color), .38);
 
   // From components/form/listbox.less
-  --dpr-listbox-disabled-background-color: #f2f2f2;
-  --dpr-listbox-disabled-text-color: rgba(var(--dpr-meta-muted-base), 0.85);
+  --dpr-listbox-disabled-background-color: rgb(var(--v-theme-surface-light));
+  --dpr-listbox-disabled-text-color: rgb(var(--v-theme-on-surface-light));
   --dpr-listbox-button-chevron-color: var(--dpr-text-color);
 
   // From components/form/select.less
-  --dpr-selectbox-disabled-background-color: #f2f2f2;
-  --dpr-selectbox-disabled-text-color: rgba(var(--dpr-meta-muted-base), 0.85);
+  --dpr-selectbox-disabled-background-color: rgb(var(--v-theme-surface-light));
+  --dpr-selectbox-disabled-text-color: rgb(var(--v-theme-on-surface-light));
 
   // From components/form/textfield.less
-  --dpr-textfield-background-color: #fff;
-  --dpr-textfield-disabled-background-color: #f2f2f2;
-  --dpr-textfield-disabled-text-color: rgba(var(--dpr-meta-muted-base), 0.85);
+  --dpr-textfield-background-color: rgb(var(--v-theme-surface));
+  --dpr-textfield-disabled-background-color: var(--dpr-textfield-background-color);
+  --dpr-textfield-border-color: rgba(var(--v-border-color), .38);
+  --dpr-textfield-focus-border-color: rgba(var(--v-border-color), 1);
 
   // From components/insert-table-picker/insert-table-picker.less
-  --dpr-insert-table-picker-label-color: rgba(var(--dpr-meta-muted-base), 0.7);*/
+  --dpr-insert-table-picker-selected-background-color: rgba(var(--v-theme-primary), var(--v-high-emphasis-opacity));
+  --dpr-insert-table-picker-label-color: var(--dpr-text-color-muted);
 
   // From components/menu/menu.less
   --dpr-menu-background-color: rgb(var(--v-theme-surface));
-  --dpr-menu-box-shadow-color-1: rgba(0, 0, 0, 0.2);
-  --dpr-menu-box-shadow-color-2: rgba(0, 0, 0, 0.14);
+  --dpr-menu-box-shadow-color-1: rgba(0, 0, 0, .2);
+  --dpr-menu-box-shadow-color-2: rgba(0, 0, 0, .14);
 
   // From components/menubar/menubar.less
   --dpr-menubar-background-color: transparent;
-/*
+
   // From components/menubar/menubar-buttons.less
   --dpr-menubar-select-disabled-text-color: var(--dpr-meta-control-disabled-text);
 
   // From components/notification/notification.less
-  --dpr-notification-success-background-color: #e4eeda;
-  --dpr-notification-success-border-color: #d7e6c8;
-  --dpr-notification-success-link-color: #b5d199;
-  --dpr-notification-warn-background-color: #fff5cc;
-  --dpr-notification-warn-border-color: #fff0b3;
-  --dpr-notification-warn-text-color: var(--dpr-text-color);
-  --dpr-notification-warn-link-color: #7a6e25;
-  --dpr-notification-error-background-color: #f5cccc;
-  --dpr-notification-error-border-color: #f0b3b3;
-  --dpr-notification-error-link-color: #77181f;
-  --dpr-notification-info-background-color: #d6e7fb;
-  --dpr-notification-info-border-color: #c1dbf9;
-  --dpr-notification-info-link-color: #2a64a6;
+  --dpr-notification-success-background-color: var(--dpr-accessibility-issue-success-background-color);
+  --dpr-notification-success-border-color: var(--dpr-notification-success-background-color);
+  --dpr-notification-success-text-color: var(--dpr-accessibility-issue-success-body-text-color);
+  --dpr-notification-success-link-color: var(--dpr-notification-success-link-color);
+  --dpr-notification-warn-background-color: var(--dpr-accessibility-issue-warn-background-color);
+  --dpr-notification-warn-border-color: var(--dpr-notification-warn-background-color);
+  --dpr-notification-warn-text-color: var(--dpr-accessibility-issue-success-body-text-color);
+  --dpr-notification-warn-link-color: var(--dpr-notification-warn-text-color);
+  --dpr-notification-error-background-color: var(--dpr-accessibility-issue-error-background-color);
+  --dpr-notification-error-border-color: var(--dpr-notification-error-background-color);
+  --dpr-notification-error-text-color: var(--dpr-accessibility-issue-error-body-text-color);
+  --dpr-notification-error-link-color: var(--dpr-notification-error-text-color);
+  --dpr-notification-info-background-color: var(--dpr-accessibility-issue-info-background-color);
+  --dpr-notification-info-border-color: var(--dpr-notification-info-background-color);
+  --dpr-notification-info-text-color: var(--dpr-accessibility-issue-info-body-text-color);
+  --dpr-notification-info-link-color: var(--dpr-notification-info-text-color);
 
   // From components/pop/pop.less
-  --dpr-pop-box-shadow-color-1: rgba(var(--dpr-meta-muted-base), 0.2);
-  --dpr-pop-box-shadow-color-2: rgba(var(--dpr-meta-muted-base), 0.15);
+  --dpr-pop-box-shadow-color-1: rgba(0, 0, 0, .2);
+  --dpr-pop-box-shadow-color-2: rgba(0, 0, 0, .15);
 
   // From components/revisionhistory/revisionhistory.less
-  --dpr-revisionhistory-background-color: #fff;
-  --dpr-revisionhistory-card-active-background-color: #a6ccf7;
+  --dpr-revisionhistory-background-color: rgb(var(--v-theme-surface));
+  --dpr-revisionhistory-card-active-background-color: rgb(var(--v-theme-surface-light));
 
   // From components/slider/slider.less
-  --dpr-slider-handle-border: #0054b4;
+  --dpr-slider-handle-border: var(--dpr-border-color);
 
   // From components/statusbar/statusbar.less
-  --dpr-statusbar-text-color: rgba(var(--dpr-meta-muted-base), 0.7);
-  --dpr-statusbar-logo-color: rgba(var(--dpr-meta-muted-base), 0.8);
-  --dpr-statusbar-resize-handle-color: rgba(var(--dpr-meta-muted-base), 0.5);
+  --dpr-statusbar-text-color: var(--dpr-text-color-muted);
+  --dpr-statusbar-logo-color: var(--dpr-text-color-muted);
+  --dpr-statusbar-resize-handle-color: var(--dpr-text-color-muted);
 
   // From components/throbber/throbber.less
-  --dpr-throbber-busy-background-color: rgba(255, 255, 255, 0.6);
-  */
+  --dpr-throbber-busy-background-color: rgba(var(--v-theme-surface), var(--v-medium-emphasis-opacity));
 
   // From components/toolbar/toolbar.less
   --dpr-toolbar-background-color: transparent;
 
   // From components/toolbar-button/toolbar-button.less
   --dpr-toolbar-button-background-color: transparent;
-  /*--dpr-toolbar-button-icon-color: var(--dpr-text-color);
-  --dpr-toolbar-button-text-color: var(--dpr-text-color);*/
-  --dpr-toolbar-button-enabled-background-color: rgba(var(--v-theme-on-surface-light), calc(var(--v-high-emphasis-opacity) * var(--v-activated-opacity) * var(--v-theme-overlay-multiplier)));
-  --dpr-toolbar-button-hover-background-color: rgba(var(--v-theme-on-surface-light), calc(var(--v-high-emphasis-opacity) * var(--v-hover-opacity) * var(--v-theme-overlay-multiplier)));
-  /*
-  --dpr-toolbar-button-chevron-color: rgba(var(--dpr-meta-muted-base), 0.5);
+  --dpr-toolbar-button-icon-color: var(--dpr-text-color);
+  --dpr-toolbar-button-text-color: var(--dpr-text-color);
+  --dpr-toolbar-button-enabled-background-color: rgba(var(--v-theme-primary), calc(var(--v-activated-opacity) * var(--v-theme-primary-overlay-multiplier)));
+  --dpr-toolbar-button-hover-background-color: rgba(var(--v-theme-on-surface), calc(var(--v-high-emphasis-opacity) * var(--v-hover-opacity) * var(--v-theme-overlay-multiplier)));
+  --dpr-toolbar-button-chevron-color: var(--dpr-text-color);
   --dpr-toolbar-button-disabled-icon-color: var(--dpr-meta-control-disabled-text);
   --dpr-toolbar-button-disabled-text-color: var(--dpr-meta-control-disabled-text);
 
   // From components/toolbar-button/toolbar-select-button.less
-  --dpr-toolbar-button-bespoke-background-color: #f7f7f7;
+  --dpr-toolbar-button-bespoke-background-color: transparent;
+
+  // From components/tooltip/tooltip.less
+  --dpr-tooltip-background-color: rgb(var(--v-theme-surface-variant));
+  --dpr-tooltip-text-color: rgb(var(--v-theme-on-surface-variant));
 
   // From components/tree/tree-button.less
-  --dpr-tree-button-enabled-background-color: #a6ccf7;
+  --dpr-tree-button-enabled-background-color: rgba(var(--v-theme-primary), var(--v-selected-opacity));
   --dpr-tree-button-icon-color: var(--dpr-text-color);
-  --dpr-tree-button-chevron-color: rgba(var(--dpr-meta-muted-base), 0.5);
+  --dpr-tree-button-chevron-color: var(--dpr-text-color);
   --dpr-tree-button-menu-icon-color: var(--dpr-text-color);
   --dpr-tree-button-text-color: var(--dpr-text-color);
   --dpr-tree-button-disabled-icon-color: var(--dpr-meta-control-disabled-text);
   --dpr-tree-button-disabled-text-color: var(--dpr-meta-control-disabled-text);
 
   // From theme/content/mergetag.less
-  --dpr-mergetag-hover-background-color: rgba(0, 108, 231, 0.1);*/
+  --dpr-mergetag-hover-background-color: rgb(var(--v-theme-surface-variant));
+}
+
+// Additional styles to fit Material Design, may deviate a bit from Vuetify but inspired by Google Docs
+
+.tox,
+.tox.tox-tinymce {
+  .tox-toolbar-overlord {
+    background: rgba(var(--v-theme-primary), var(--v-idle-opacity));
+    border-radius: 1.5em;
+    margin-inline: .5em;
+  }
+
+  /* stylelint-disable no-descending-specificity */
+  .tox-tbtn--active,
+  .tox-tbtn--enabled,
+  .tox-tbtn--enabled:hover,
+  .tox-tbtn--enabled:focus {
+    svg {
+      fill: rgb(var(--v-theme-primary-darken-1));
+    }
+  }
+  /* stylelint-enable no-descending-specificity */
+
+  .tox-color-input span::before {
+    background-repeat: repeat;
+  }
 }

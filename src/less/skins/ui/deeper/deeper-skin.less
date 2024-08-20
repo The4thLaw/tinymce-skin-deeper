@@ -35,6 +35,7 @@
 @accessibility-issue-success-background-color: var(--dpr-accessibility-issue-success-background-color);
 
 // From components/button/button.less
+@button-background-color: var(--dpr-button-background-color);
 @button-text-color: var(--dpr-button-text-color);
 @button-active-background-color: var(--dpr-button-active-background-color);
 @button-enabled-active-background-color: var(--dpr-button-enabled-active-background-color);
@@ -47,6 +48,7 @@
 @button-naked-active-background-color: var(--dpr-button-naked-active-background-color);
 @button-naked-disabled-icon-color: var(--dpr-button-naked-disabled-icon-color);
 @button-naked-hover-background-color: var(--dpr-button-naked-hover-background-color);
+@button-naked-disabled-background-color: var(--dpr-button-naked-disabled-background-color);
 
 // From components/button/button-secondary.less
 @button-secondary-text-color: var(--dpr-button-secondary-text-color);
@@ -57,6 +59,8 @@
 @button-secondary-enabled-hover-background-color: var(--dpr-button-secondary-enabled-hover-background-color);
 @button-secondary-active-background-color: var(--dpr-button-secondary-active-background-color);
 @button-secondary-hover-background-color: var(--dpr-button-secondary-hover-background-color);
+@button-secondary-border-color: var(--dpr-button-secondary-border-color);
+@button-secondary-hover-border-color: var(--dpr-button-secondary-hover-border-color);
 
 // From components/checkbox/checkbox.less
 @checkbox-unselected-color: var(--dpr-checkbox-unselected-color);
@@ -118,8 +122,11 @@
 @textfield-background-color: var(--dpr-textfield-background-color);
 @textfield-disabled-background-color: var(--dpr-textfield-disabled-background-color);
 @textfield-disabled-text-color: var(--dpr-textfield-disabled-text-color);
+@textfield-border-color: var(--dpr-textfield-border-color);
+@textfield-focus-border-color: var(--dpr-textfield-focus-border-color);
 
 // From components/insert-table-picker/insert-table-picker.less
+@insert-table-picker-selected-background-color: var(--dpr-insert-table-picker-selected-background-color);
 @insert-table-picker-label-color: var(--dpr-insert-table-picker-label-color);
 
 // From components/menu/menu.less
@@ -136,6 +143,7 @@
 // From components/notification/notification.less
 @notification-success-background-color: var(--dpr-notification-success-background-color);
 @notification-success-border-color: var(--dpr-notification-success-border-color);
+@notification-success-text-color: var(--dpr-notification-success-text-color);
 @notification-success-link-color: var(--dpr-notification-success-link-color);
 @notification-warn-background-color: var(--dpr-notification-warn-background-color);
 @notification-warn-border-color: var(--dpr-notification-warn-border-color);
@@ -143,9 +151,11 @@
 @notification-warn-link-color: var(--dpr-notification-warn-link-color);
 @notification-error-background-color: var(--dpr-notification-error-background-color);
 @notification-error-border-color: var(--dpr-notification-error-border-color);
+@notification-error-text-color: var(--dpr-notification-error-text-color);
 @notification-error-link-color: var(--dpr-notification-error-link-color);
 @notification-info-background-color: var(--dpr-notification-info-background-color);
 @notification-info-border-color: var(--dpr-notification-info-border-color);
+@notification-info-text-color: var(--dpr-notification-info-text-color);
 @notification-info-link-color: var(--dpr-notification-info-link-color);
 
 // From components/pop/pop.less
@@ -160,7 +170,7 @@
 @slider-handle-border: 2px solid var(--dpr-slider-handle-border);
 
 // From components/statusbar/statusbar.less
-@statusbar-text-color: var(--dpr-dpr-statusbar-text-color);
+@statusbar-text-color: var(--dpr-statusbar-text-color);
 @statusbar-logo-color: var(--dpr-statusbar-logo-color);
 @statusbar-resize-handle-color: var(--dpr-statusbar-resize-handle-color);
 
@@ -183,6 +193,10 @@
 // From components/toolbar-button/toolbar-select-button.less
 @toolbar-button-bespoke-background-color: var(--dpr-toolbar-button-bespoke-background-color);
 
+// From components/tooltip/tooltip.less
+@tooltip-background-color: var(--dpr-tooltip-background-color);
+@tooltip-text-color: var(--dpr-tooltip-text-color);
+
 // From components/tree/tree-button.less
 @tree-button-enabled-background-color: var(--dpr-tree-button-enabled-background-color);
 @tree-button-icon-color: var(--dpr-tree-button-icon-color);
@@ -197,4 +211,3 @@
 
 // TODO: don't import the skins here, let the user manage the bindings
 @import 'deeper-vuetify-bindings.less';
-
