@@ -15,6 +15,8 @@
   --dpr-border-color: rgba(var(--v-border-color), var(--v-border-opacity));
   --dpr-text-color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
   --dpr-text-color-muted: rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity));
+  //
+  --dpr-keyboard-focus-outline-color: rgba(var(--v-border-color), var(--v-high-emphasis-opacity));
 
   // From globals/globals.less
   --dpr-separator-color: gray; // No variable in Vuetify
@@ -235,4 +237,8 @@
   .tox-color-input span::before {
     background-repeat: repeat;
   }
+}
+
+.tox.tox-tinymce {
+  border-radius: 4px;
 }
